@@ -21,7 +21,7 @@ public class Juego_del_colgado {
 				
 				break;
 			}
-			System.out.print("No se puede iniciar el juego con menos de dos jugadores ");
+			System.out.print("No se puede iniciar el juego con menos de dos jugadores. Seleccione otro numero de jugadores: ");
 			numjugadores = s. nextInt();
 			s.nextLine();
 		}
@@ -35,7 +35,48 @@ public class Juego_del_colgado {
 			vidas[i] = VIDAS;
 		}
 		
+		System.out.print("Una persona de tu alrededor que coloque una palabra ");
+		String palabrasecreta =  s. nextLine().toLowerCase();
+		String palabraDesconocida = "_".repeat(palabrasecreta.length());
 		
+		boolean juegoAcavado = false;
+		int turnojugador = 0;
+		
+		while(!juegoAcavado) {
+			
+			System.out.println("\n--- Turno de Jugador " + (turnojugador + 1) + " ---");
+			System.out.println("Vidas restantes: " + vidas[turnojugador]);
+			
+			
+			
+			for(int i = 0; i < palabraDesconocida.length();i++) {
+				
+				 System.out.print(palabraDesconocida.charAt(i) + " ");
+			}
+			
+			System.out.println();
+			
+			if (vidas[turnojugador]>0) {
+				
+				char letra = ' ';
+				
+				boolean letraValida = false;
+				
+				while(!letraValida) {
+					
+					System.out.print("Jugador " + (turnojugador + 1) + ", ingrese una letra: ");
+					String entrada = s.nextLine().toLowerCase();
+					
+					if(entrada.length()==1 && Character.isLetter(entrada.charAt(0))) {
+						
+						
+					}
+					
+				}
+			}
+			
+			
+		}
 		
 		
 		
