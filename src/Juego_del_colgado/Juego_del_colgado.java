@@ -26,6 +26,14 @@ public class Juego_del_colgado {
 			s.nextLine();
 		}
 		
+		int VIDAS = 6;
+		
+		int[] vidas = new int [numjugadores];
+		
+		for (int i = 0; i < numjugadores; i++) {
+			
+			vidas[i] = VIDAS;
+		}
 		
 		
 		
