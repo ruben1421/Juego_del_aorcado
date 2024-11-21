@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
+
 public class Juego_del_colgado {
 
 	public static void main(String[] args) {
@@ -36,7 +37,7 @@ public class Juego_del_colgado {
 		}
 		
 		System.out.print("Una persona de tu alrededor que coloque una palabra ");
-		String palabrasecreta =  s. nextLine().toLowerCase();
+		String palabrasecreta =  s.nextLine().toLowerCase();
 		String palabraDesconocida = "_".repeat(palabrasecreta.length());
 		
 		boolean juegoAcavado = false;
@@ -68,11 +69,22 @@ public class Juego_del_colgado {
 					String entrada = s.nextLine().toLowerCase();
 					
 					if(entrada.length()==1 && Character.isLetter(entrada.charAt(0))) {
-						
-						
-					}
+						letra = entrada.charAt(0);
+						letraValida = true;
 					
+					} else {
+						
+						System.out.println("Entrada inválida. Por favor, ingrese solo una letra.");
+					}
 				}
+				 if (palabraDesconocida.indexOf(letra)>= 0) {
+					 
+					
+					 
+				 }
+				 
+	                }
+				
 			}
 			
 			
@@ -83,4 +95,3 @@ public class Juego_del_colgado {
 		
 	}
 
-}
