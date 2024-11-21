@@ -77,11 +77,27 @@ public class Juego_del_colgado {
 						System.out.println("Entrada inválida. Por favor, ingrese solo una letra.");
 					}
 				}
+				
+				 String actualizarPalabra;
 				 if (palabraDesconocida.indexOf(letra)>= 0) {
 					 
+					 
+					 System.out.println("¡Correcto! La palabra actual es:");
+	                    for (int i = 0; i < palabraDesconocida.length(); i++) {
+	                        System.out.print(palabraDesconocida.charAt(i) + " ");
+	                    }
+	                    
+	                } else {
+	                    
+	                    vidas[turnojugador]--;
+	                    System.out.println("¡Incorrecto! La letra no está en la palabra.");
+	                    System.out.println("Vidas restantes: " + vidas[turnojugador]);
 					
 					 
 				 }
+				 if (!palabraDesconocida.contains("_")) {
+	                    System.out.println("¡Felicidades, Jugador " + (turnojugador + 1) + "! Has adivinado la palabra.");
+	                    boolean juegoAcabado = true;
 				 
 	                }
 				
@@ -93,5 +109,5 @@ public class Juego_del_colgado {
 		
 		
 		
-	}
+	}}
 
