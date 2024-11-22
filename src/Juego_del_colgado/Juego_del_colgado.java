@@ -15,7 +15,7 @@ public class Juego_del_colgado {
 		//para ingresar el numero de jugadores
 		System.out.print("INGRESE CUANTOS JUGADORES SE UNIRAN AL JUEGO : ");
 		int numjugadores = s. nextInt();
-		s.nextLine();
+		int[] jugador = new int[numjugadores];
 		
 		while(numjugadores < 2) 
 		{
@@ -24,8 +24,8 @@ public class Juego_del_colgado {
 				break;
 			}
 			System.out.print("No se puede iniciar el juego con menos de dos jugadores. Seleccione otro numero de jugadores: ");
-			numjugadores = s. nextInt();
-			s.nextLine();
+			numjugadores = s.nextInt();
+			
 		}
 		
 		//vidas
@@ -46,6 +46,34 @@ public class Juego_del_colgado {
 		char[] letrasdesconocida = palabraDesconocida.toCharArray();
 		
 		
+		
+		while(true) {
+			
+			for (int i = 0; i < jugador.length; i++) {
+				
+				System.out.println("jugador: " + (i + 1));
+				System.out.println("vidas: " + vidas[i]);
+				
+				for (int j = 0; j < letrasdesconocida.length; j++) {
+					System.out.print(letrasdesconocida[i]);
+				}
+				
+				System.out.print("ingrese una letra: ");
+				 char entrada = s.nextLine().toLowerCase().charAt(0);
+				char[] letra = new char[entrada];
+				
+				for (int j = 0; j < letrasdesconocida.length; j++) {
+					
+					if(letrasdesconocida[j] == entrada) {
+						
+						
+						
+						
+					}
+					
+				}
+			}
+		}
 		
 		boolean juegoAcavado = false;
 		int turnojugador = 0;
