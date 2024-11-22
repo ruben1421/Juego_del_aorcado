@@ -12,6 +12,7 @@ public class Juego_del_colgado {
 
 		Scanner s = new Scanner(System.in);
 		
+		//para ingresar el numero de jugadores
 		System.out.print("INGRESE CUANTOS JUGADORES SE UNIRAN AL JUEGO : ");
 		int numjugadores = s. nextInt();
 		s.nextLine();
@@ -27,18 +28,24 @@ public class Juego_del_colgado {
 			s.nextLine();
 		}
 		
-		int VIDAS = 6;
+		//vidas
+		
+	
 		
 		int[] vidas = new int [numjugadores];
 		
 		for (int i = 0; i < numjugadores; i++) {
 			
-			vidas[i] = VIDAS;
+			vidas[i] = 6;
 		}
 		
 		System.out.print("Una persona de tu alrededor que coloque una palabra ");
 		String palabrasecreta =  s.nextLine().toLowerCase();
-		String palabraDesconocida = "_".repeat(palabrasecreta.length());
+		String palabraDesconocida = palabrasecreta.replaceAll(".", "_");
+		char[] letrasdePalabra = palabrasecreta.toCharArray();
+		char[] letrasdesconocida = palabraDesconocida.toCharArray();
+		
+		
 		
 		boolean juegoAcavado = false;
 		int turnojugador = 0;
@@ -49,15 +56,13 @@ public class Juego_del_colgado {
 			System.out.println("Vidas restantes: " + vidas[turnojugador]);
 			
 			
-			
 			for(int i = 0; i < palabraDesconocida.length();i++) {
 				
 				 System.out.print(palabraDesconocida.charAt(i) + " ");
 			}
 			
-			System.out.println();
 			
-			if (vidas[turnojugador]>0) {
+		while (vidas[turnojugador]>0) {
 				
 				char letra = ' ';
 				
@@ -78,7 +83,6 @@ public class Juego_del_colgado {
 					}
 				}
 				
-				 String actualizarPalabra;
 				 if (palabraDesconocida.indexOf(letra)>= 0) {
 					 
 					 
@@ -95,10 +99,7 @@ public class Juego_del_colgado {
 					
 					 
 				 }
-				 if (!palabraDesconocida.contains("_")) {
-	                    System.out.println("¡Felicidades, Jugador " + (turnojugador + 1) + "! Has adivinado la palabra.");
-	                    boolean juegoAcabado = true;
-				 
+				
 	                }
 				
 			}
@@ -109,5 +110,5 @@ public class Juego_del_colgado {
 		
 		
 		
-	}}
+	}
 
