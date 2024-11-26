@@ -65,11 +65,26 @@ public class Juego_del_colgado {
 	        			 System.out.print(Avance[j]);
 		}
 		
+	        		 
+	        		 System.out.println(" ");
+	        		 System.out.println(" ");
+	        		 
+	        		 System.out.println(" Ingrese una letra: ");
+	        		 char letra = s.next().toLowerCase().charAt(0);
+	        		 
+	        		 boolean acierto = false;
+	        		 for (int j = 0; j < palabraSecreta.length(); j++) {
+	        			 
+	        			 if(secretasS[j] == letra) {
+	        				 
+	        				 Avance[j]= letra;
+	        				 acierto = true;
+	        			 }
 		
 		
 		
 	        	}
 	        }
 		}
-	}
+	}}
 
