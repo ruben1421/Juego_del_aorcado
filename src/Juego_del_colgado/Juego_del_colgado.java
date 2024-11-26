@@ -62,6 +62,8 @@ public class Juego_del_colgado {
 				 char entrada = s.nextLine().toLowerCase().charAt(0);
 				char[] letra = new char[entrada];
 				
+				boolean letraacertada = false;
+				
 				for (int j = 0; j < letrasdesconocida.length; j++) {
 					
 					if(letrasdesconocida[j] == entrada) {
