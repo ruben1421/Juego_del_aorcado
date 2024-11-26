@@ -27,7 +27,26 @@ public class Juego_del_colgado {
 	        }
 		 
 		
-		
+	        int[] jugadores;
+	        jugadores = new int[numJugadores];
+		 
+		 
+		 
+		 String palabraSecreta;
+		 char[] secretasS;
+		 
+		 Scanner x = new Scanner(System.in);
+		 System.out.print("Que alguien de tu alrededor coloque una plabra : ");
+		 palabraSecreta = x.nextLine().toLowerCase();
+		 secretasS = palabraSecreta.toCharArray();
+		 
+
+	        
+	        int[] vidas;
+	        vidas = new int[numJugadores];
+	        for (int i = 0; i < numJugadores; i++) {
+	            vidas[i] = 6; 
+	        }
 		}
 		
 		
