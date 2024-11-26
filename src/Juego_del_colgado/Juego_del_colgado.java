@@ -84,7 +84,35 @@ public class Juego_del_colgado {
 		
 		
 	        	}
+	        		 
+	        		 if(acierto) {
+	        			 
+	        			 System.out.println(" Acertaste la letra ");
+	        			 System.out.println(" la letra es:  " + letra );
+	        			 
+	        		 } else {
+	        			 System.out.println(" No Acertaste la letra ");
+	        			 vidas[i]--;
+	        			 
+	        		 }
+	        		 if (Arrays.equals(secretasS, Avance)) {
+	        			 
+	        			 System.out.println(" Acertaste la palabra. ¡GANASTE! ");
+	        			 System.out.println("La palabra era:  " + palabraSecreta);
+	        			 
+	        			 return;
+	        		 }
+	        		 
+	        		 if(vidas[i] <= 0) {
+	        			 
+	        			 System.out.println("TE QUEDASTE SIN INTENTOS  ");
+	        			 System.out.println("La palabra era:  " + palabraSecreta);
+	        			 
+	        			 return;
+	        			 
 	        }
-		}
-	}}
+	      }
+	    }
+	 }
+}
 
