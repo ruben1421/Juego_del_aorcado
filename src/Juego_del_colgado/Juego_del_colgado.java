@@ -1,5 +1,6 @@
 package Juego_del_colgado;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -47,10 +48,28 @@ public class Juego_del_colgado {
 	        for (int i = 0; i < numJugadores; i++) {
 	            vidas[i] = 6; 
 	        }
+	        
+	        char[]Avance = new char[palabraSecreta.length()];
+	        Arrays.fill(Avance, '_' );
+	        
+	        while(true){
+	        	
+	        	for(int i = 0; i < jugadores.length; i ++) {
+	        		
+	        		 System.out.println("\n--- Turno de Jugador " + (i + 1) + " ---");
+	        		 System.out.println("Vidas restantes: " + vidas[i]);
+	        		 
+
+	        		 for(int j = 0; j < Avance.length; j++) {
+	        			 
+	        			 System.out.print(Avance[j]);
 		}
 		
 		
 		
 		
+	        	}
+	        }
+		}
 	}
 
